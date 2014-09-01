@@ -14,12 +14,13 @@ var injected = injected || (function(){
     for (var i = 0; i < profiles.length; i ++) {
       var vCard = profiles[i].children[1].children[2].children;
       var viewedAlready = vCard[2].children[0];
+      var profileLink = vCard[0].children[0].getAttribute("href")
       
       if (viewedAlready) {
         profiles[i].style.display = "none";
         console.log("seen already");
       } else { 
-        console.log("possibily good")       
+        urls.push(profileLink);       
       }
     }
     return urls;
