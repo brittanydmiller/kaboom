@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Kaboom",
+  "version": "1.0",
+  "description": "Filters out candidates based on their current job title as well as who you've previously viewed",
+
+  "browser_action": {
+    "default_icon": "kaboom_19.png"
+  },
+
+  "icons": { "19": "kaboom_19.png",
+           "48": "kaboom_48.png",
+          "128": "kaboom_128.png" },
+
+  "background": {
+    "scripts": ["event.js"],
+    "persistent": false
+  },
+  
+  "permissions": ["<all_urls>"]
+}
