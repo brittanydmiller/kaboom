@@ -8,8 +8,21 @@ var injected = injected || (function(){
   var methods = {};
 
   methods.filterCandidates = function(){
-    var colors = ["red", "blue", "green"];
-    return colors;
+    var urls = [];
+    var profiles = document.querySelectorAll("li.results-item.profile");
+
+    for (var i = 0; i < profiles.length; i ++) {
+      var vCard = profiles[i].children[1].children[2].children;
+      var viewedAlready = vCard[2].children[0];
+      
+      if (viewedAlready) {
+        profiles[i].style.display = "none";
+        console.log("seen already");
+      } else { 
+        console.log("possibily good")       
+      }
+    }
+    return urls;
   };
 
   // This tells the script to listen for
