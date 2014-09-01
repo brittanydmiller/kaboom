@@ -12,6 +12,11 @@
   "icons": { "19": "kaboom_19.png",
            "48": "kaboom_48.png",
           "128": "kaboom_128.png" },
+
+  "background": {
+    "scripts": ["event.js"],
+    "persistent": false
+  },
   
   "permissions": ["<all_urls>"]
 }
